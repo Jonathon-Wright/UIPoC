@@ -35,8 +35,7 @@ public class StepDefs {
 
     @When("^I enter the login details for a 'validUser'$")
     public void i_enter_the_login_details_for_a_validUser() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        loginPage.login("pravin", "pravin");
     }
 
     @Then("^I can see the following message: 'Welcome to Volo'$")
@@ -47,7 +46,7 @@ public class StepDefs {
 
     @When("^I enter the login details for a 'invalidUser'$")
     public void i_enter_the_login_details_for_a_invalidUser() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions    throw new PendingException();
+        loginPage.login("incorrect", "noentry");
     }
 
     @Then("^I can see the following message: 'Invalid username or password'$")
