@@ -7,7 +7,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
         plugin = {"pretty", "html:target/cucumber"},
         tags = "~@to-do",
         glue = "tests",
-        features = "classpath:volo2.features"
+        features = "classpath:features"
 )
 
 public class RunCukes extends AbstractTestNGCucumberTests {

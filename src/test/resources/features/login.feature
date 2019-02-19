@@ -29,3 +29,5 @@ Feature: Login
     Examples:
       | userType    | validationMessage            |
       | invalidUser | Invalid username or password |
+
+
