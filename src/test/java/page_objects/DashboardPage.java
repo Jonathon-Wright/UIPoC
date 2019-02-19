@@ -5,7 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
 public class DashboardPage extends BasePage {
+
+    @FindBy(xpath = "//div[@id='app']/div[@class='container']//h1[.='Welcome to Volo']")
+    public WebElement text_Welcome;
 
     @FindBy(xpath = "//*[@id=\"app\"]/div[1]/nav/ul/li[3]/div/div/button")
     private WebElement button_ImportProducts;

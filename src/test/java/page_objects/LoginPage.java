@@ -17,7 +17,7 @@ public class LoginPage extends BasePage {
     private WebElement text_password;
 
     @FindBy(xpath = "//div[@id='kc-content-wrapper']//span[@class='kc-feedback-text']")
-    private WebElement message_unsuccessful;
+    public WebElement text_Unsuccessful;
 
     public LoginPage(WebDriver driver) {
         super(driver);

@@ -8,6 +8,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import page_objects.DashboardPage;
 import page_objects.LoginPage;
 import utils.Utils;
 
@@ -15,11 +16,13 @@ public class StepDefs {
 
     WebDriver driver;
     LoginPage loginPage;
+    DashboardPage dashboardPage;
 
     @Before
     public void setUp() {
         driver = Utils.getDriver();
         loginPage = new LoginPage(driver);
+        dashboardPage = new DashboardPage(driver);
     }
 
     @After
@@ -40,8 +43,8 @@ public class StepDefs {
 
     @Then("^I can see the following message: 'Welcome to Volo'$")
     public void i_can_see_the_following_message_Welcome_to_Volo() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        Thread.sleep(2000);
+        Assert.assertEquals(dashboardPage.text_Welcome.getText(), "Welcome to Volo", "The dashboard page could not be found or its welcome message has changed");
     }
 
     @When("^I enter the login details for a 'invalidUser'$")
@@ -51,8 +54,7 @@ public class StepDefs {
 
     @Then("^I can see the following message: 'Invalid username or password'$")
     public void i_can_see_the_following_message_Invalid_username_or_password() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        Assert.assertEquals(loginPage.text_Unsuccessful.getText(), "Invalid username or password", "The login failure message could not be found or its wording has changed");
     }
 
 }
