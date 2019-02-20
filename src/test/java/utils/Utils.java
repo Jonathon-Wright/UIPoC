@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class Utils {
 
     private static final String URL = System.getProperty("url", "https://app.integration1.volo2.com/4303");
-    private static final String BROWSER = System.getProperty("browser", "chrome");
+    private static final String BROWSER = System.getProperty("browser", "headless");
 
     public static String getUrl() {
         return URL;

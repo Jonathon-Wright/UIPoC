@@ -1,4 +1,4 @@
-package page_objects;
+package pageobjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +18,9 @@ public class LoginPage extends BasePage {
 
     @FindBy(xpath = "//div[@id='kc-content-wrapper']//span[@class='kc-feedback-text']")
     public WebElement text_Unsuccessful;
+
+    @FindBy(xpath = "https://app.integration1.volo2.com/4303")
+    public WebElement button_logout;
 
     public LoginPage(WebDriver driver) {
         super(driver);
