@@ -54,7 +54,7 @@ public class StepDefs {
 
     @Then("^I can see the following message: 'Invalid username or password'$")
     public void i_can_see_the_following_message_Invalid_username_or_password() throws Throwable {
-        Assert.assertEquals(loginPage.text_Unsuccessful.getText(), "Invalid username or password", "The login failure message could not be found or its wording has changed");
+        Assert.assertEquals(loginPage.text_Unsuccessful.getText(), "Invalid username or password.", "The login failure message could not be found or its wording has changed");
     }
 
 }
